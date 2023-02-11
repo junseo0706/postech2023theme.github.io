@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2023theme</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery.fadethis.js"></script>
+</head>
+
+
+<body style="
+    background-image: url('images/background.png'); 
+    background-size: cover;
+    background-repeat: space;
+    background-position: 0 10vh;
+    ">
+    <div class="top_banner"></div>
+    <div class="bottom_banner"></div>
+    <div class="main_logo"></div>
+    <div class="ot_logo"></div>
+
+    <div class="background" style="height: 100vh;">
+        <div class="index-contents">
+            <div class="roundbtn-story">
+                <a href="./story.html" class="btn" style="position: relative; left:-3vh;">
+                    스토리 보기
+                </a>
+            </div>
+            <div>
+                <div class="roundbtn-1 menuBtn-1">
+                    <a class="btn">
+                        1일차
+                    </a>
+                </div>
+                <nav id="navigation-list-1" style="all:unset;">
+                    <ul class="navi-1">
+                        <li><img src="./images/icon/book.png"><a href="./story/day1.html">메인 스토리</a></li>
+                        <li><img src="./images/icon/quiz_btn.png"><a href="./low/cow.html">소고기를 먹자</a></li>
+                        <li><img src="./images/icon/quiz_btn.png"><a href="./mid/balance.html">저울을 써보자</a></li>
+                        <li><img src="./images/icon/quiz_btn.png"><a href="./mid/dress.html">무슨 옷을 입었지</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <div class="roundbtn-2 menuBtn-2">
+                    <a class="btn">
+                        2일차
+                    </a>
+                    <div class="lock"></div>
+                </div>
+            </div>
+            <div>
+                <div class="roundbtn-3 menuBtn-3">
+                    <a class="btn">
+                        3일차
+                    </a>
+                    <div class="lock"></div>
+                </div>
+            </div>
+            <div>
+                <div class="roundbtn-4 menuBtn-4">
+                    <a class="btn">
+                        4일차
+                    </a>
+                    <div class="lock"></div>
+                </div>
+            </div>
+            <div>
+                <div class="roundbtn-5 menuBtn-5">
+                    <a class="btn">
+                        5일차
+                    </a>
+                    <div class="lock"></div>
+                </div>
+            </div>
+            <div>
+                <div class="roundbtn-story">
+                    <a id="show-page" class="btn" style="font-size: 2vh; position: relative; left:-3vh;">
+                        모은 페이지
+                    </a>
+                </div>
+                <div class="modal-background page">
+                    <div class="window">
+                        <div class="popup">
+                            <div
+                                style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10vh;">
+                                <img src="./images/page_popup/book.png" alt="book_image"
+                                    style="margin: 0 auto; max-height: 50vh; max-width: 600px;">
+                                <div style="font-family: 'noto'; font-size: 2vh">
+                                    현재까지 모은 페이지 수: 0개
+                                </div>
+                            </div>
+                            <a class="close-popup" id="close-page">닫기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="roundbtn-story">
+                    <a id="show-lecture" class="btn" style="font-size: 2vh; position: relative; left:-3vh;">
+                        강연 문제
+                    </a>
+                </div>
+                <div class="modal-background lecture">
+                    <div class="window">
+                        <div class="popup">
+                            <div
+                                style="display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 10vh;">
+                                <div style="font-family: 'noto'; font-size: 2vh">
+                                    강연문제는 아직 없습니다.
+                                </div>
+                            </div>
+                            <a class="close-popup" id="close-lecture">닫기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        jQuery(document).ready(function ($) {
+            $("#navigation-list-1").hide();
+            $("#navigation-list-2").hide();
+            $("#navigation-list-3").hide();
+            $("#navigation-list-4").hide();
+            $("#navigation-list-5").hide();
+            $(".menuBtn-1").click(function () {
+                $("#navigation-list-2").hide();
+                $("#navigation-list-3").hide();
+                $("#navigation-list-4").hide();
+                $("#navigation-list-5").hide();
+                $("#navigation-list-1").slideToggle(300);
+                var Btnheight = $(".menuBtn-1").height();
+                var vh = $(".roundbtn-story").height();
+                $(".menuBtn-1").css("height", Btnheight == vh ? "4vh" : "5vh");
+                $(".menuBtn-1").css("background-image", Btnheight == vh ? "url('./images/scroll/roll/day1.png')" : "url('./images/scroll/unroll/day1.png')");
+                $(".menuBtn-2").css("height", "5vh");
+                $(".menuBtn-3").css("height", "5vh");
+                $(".menuBtn-4").css("height", "5vh");
+                $(".menuBtn-5").css("height", "5vh");
+            });
+            /*
+            $(".menuBtn-2").click(function () {
+                $("#navigation-list-1").hide();
+                $("#navigation-list-3").hide();
+                $("#navigation-list-4").hide();
+                $("#navigation-list-5").hide();
+                $("#navigation-list-2").slideToggle(300);
+                var Btnheight = $(".menuBtn-2").height();
+                var vh = $(".roundbtn-story").height();
+                $(".menuBtn-1").css("height", "5vh");
+                $(".menuBtn-2").css("height", Btnheight == vh ? "4vh" : "5vh");
+                $(".menuBtn-2").css("background-image", Btnheight == vh ? "url('./images/scroll/roll/day2.png')" : "url('./images/scroll/unroll/day2.png')");
+                $(".menuBtn-3").css("height", "5vh");
+                $(".menuBtn-4").css("height", "5vh");
+                $(".menuBtn-5").css("height", "5vh");
+            });
+            $(".menuBtn-3").click(function () {
+                $("#navigation-list-1").hide();
+                $("#navigation-list-2").hide();
+                $("#navigation-list-4").hide();
+                $("#navigation-list-5").hide();
+                $("#navigation-list-3").slideToggle(300);
+                var Btnheight = $(".menuBtn-3").height();
+                var vh = $(".roundbtn-story").height();
+                $(".menuBtn-1").css("height", "5vh");
+                $(".menuBtn-2").css("height", "5vh");
+                $(".menuBtn-3").css("height", Btnheight == vh ? "4vh" : "5vh");
+                $(".menuBtn-3").css("background-image", Btnheight == vh ? "url('./images/scroll/roll/day3.png')" : "url('./images/scroll/unroll/day3.png')");
+                $(".menuBtn-4").css("height", "5vh");
+                $(".menuBtn-5").css("height", "5vh");
+            });
+            $(".menuBtn-4").click(function () {
+                $("#navigation-list-1").hide();
+                $("#navigation-list-2").hide();
+                $("#navigation-list-3").hide();
+                $("#navigation-list-5").hide();
+                $("#navigation-list-4").slideToggle(300);
+                var Btnheight = $(".menuBtn-4").height();
+                var vh = $(".roundbtn-story").height();
+                $(".menuBtn-1").css("height", "5vh");
+                $(".menuBtn-2").css("height", "5vh");
+                $(".menuBtn-3").css("height", "5vh");
+                $(".menuBtn-4").css("height", Btnheight == vh ? "4vh" : "5vh");
+                $(".menuBtn-4").css("background-image", Btnheight == vh ? "url('./images/scroll/roll/day4.png')" : "url('./images/scroll/unroll/day4.png')");
+                $(".menuBtn-5").css("height", "5vh");
+            });
+            $(".menuBtn-5").click(function () {
+                $("#navigation-list-1").hide();
+                $("#navigation-list-2").hide();
+                $("#navigation-list-3").hide();
+                $("#navigation-list-4").hide();
+                $("#navigation-list-5").slideToggle(300);
+                var Btnheight = $(".menuBtn-5").height();
+                var vh = $(".roundbtn-story").height();
+                $(".menuBtn-1").css("height", "5vh");
+                $(".menuBtn-2").css("height", "5vh");
+                $(".menuBtn-3").css("height", "5vh");
+                $(".menuBtn-4").css("height", "5vh");
+                $(".menuBtn-5").css("height", Btnheight == vh ? "4vh" : "5vh");
+                $(".menuBtn-5").css("background-image", Btnheight == vh ? "url('./images/scroll/roll/day5.png')" : "url('./images/scroll/unroll/day5.png')");
+            });
+            //*/
+        });
+
+        function showp() {
+            let elem = document.querySelector(".page");
+
+            elem.className = "modal-background page show"
+        }
+
+        function showl() {
+            let elem = document.querySelector(".lecture");
+
+            elem.className = "modal-background lecture show"
+        }
+
+        function closep() {
+            let elem = document.querySelector(".page");
+
+            elem.className = "modal-background page"
+        }
+
+        function closel() {
+            let elem = document.querySelector(".lecture");
+
+            elem.className = "modal-background lecture"
+        }
+
+        let sp = document.querySelector("#show-page");
+        sp.addEventListener("click", showp)
+        let sl = document.querySelector("#show-lecture");
+        sl.addEventListener("click", showl)
+
+        let cp = document.querySelector("#close-page");
+        cp.addEventListener("click", closep)
+        let cl = document.querySelector("#close-lecture");
+        cl.addEventListener("click", closel)
+    </script>
+</body>
+
+</html>

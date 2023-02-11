@@ -1,0 +1,210 @@
+@font-face {
+    src: url("../fonts/NotoSansKR-Light.otf");
+    font-family: "noto";
+    font-style: normal;
+}
+
+body {
+    background-image: url("../images/page/backgound.png");
+    background-size: 100vw auto;
+    background-clip: content-box;
+    background-attachment: fixed;
+    background-position: 10vh auto;
+}
+
+.story {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-bottom: 4vh;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'noto';
+    word-break: keep-all;
+    text-indent: 2vw;
+}
+
+.line {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-bottom: 4vh;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'noto';
+    font-style: italic; 
+    word-break: keep-all;
+}
+
+.problem {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-bottom: 4vh;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'noto';
+    word-break: keep-all;
+}
+
+.quiz {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    text-align: center;
+    font-size: 64px;
+    font-family: 'noto';
+    font-weight:bold; 
+    word-break: keep-all;
+}
+
+.submitbtn {
+    width: 40vw;
+    height: 10vh;
+    font-size: 36px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.submitbtn {
+    font-family: 'noto';
+    text-align: center;
+    color: rgb(0, 0, 0); 
+    font-weight:bold; 
+    text-decoration-line: none;
+}
+
+img {
+    margin: auto;
+    display: block;
+}
+
+.question {
+    padding: 0;
+    margin: auto 0;
+    z-index: 5000;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration-line: none;
+    font-size: 2vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2vh;
+}
+
+
+.home {
+    padding: 0;
+    margin: 0;
+    z-index: 5000;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration-line: none;
+    font-size: 2vh;
+}
+
+.scroll-container {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    overflow: auto;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+.top_page_banner {
+    z-index: 5;
+
+    background-image: url("../images/page/top_banner.png");
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 8vh;
+    pointer-events: none; 
+}
+
+.bottom_page_banner {
+    z-index: 5;
+
+    background-image: url("../images/page/bottom_banner.png");
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: cover;
+    position: fixed;
+    top: 92vh;
+    width: 100vw;
+    height: 8vh;
+    pointer-events: none; 
+}
+
+.top_left {
+    z-index: 5;
+
+    background-image: url("../images/page/left.png");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    top:4vh;
+    left: 0;
+    width: 16.856vh;
+    height: 8vh;
+    pointer-events: none; 
+}
+
+.top_right {
+    z-index: 5;
+
+    background-image: url("../images/page/right.png");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    top:4vh;
+    right: 0;
+    width: 16.856vh;
+    height: 8vh;
+    pointer-events: none; 
+}
+
+.bottom_left {
+    z-index: 5;
+
+    background-image: url("../images/page/left.png");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 88vh;
+    left: 0;
+    width: 16.856vh;
+    height: 8vh;
+    pointer-events: none; 
+}
+
+.bottom_right {
+    z-index: 5;
+
+    background-image: url("../images/page/right.png");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 88vh;
+    right: 0;
+    width: 16.856vh;
+    height: 8vh;
+    pointer-events: none; 
+}
